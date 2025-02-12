@@ -1,0 +1,1 @@
+# NeckCare - coding task
