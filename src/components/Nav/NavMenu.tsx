@@ -7,11 +7,14 @@ import NavLink from "./NavLink";
 import arrowRightSrc from "@/assets/arrow-right.svg";
 import menuBarsSrc from "@/assets/menu-bars.svg";
 import * as ROUTES from "@/constants/routes";
+import { useBodyLock } from "@/hooks/useBodyLock";
 import { useToggle } from "@/hooks/useToggle";
-
 
 const NavMenu: React.FC = () => {
   const { isOpen, toggleOpen } = useToggle();
+
+  useBodyLock(isOpen);
+
   return (
     <div className="flex gap-3">
       <NavLink href={ROUTES.CONTACT}>
