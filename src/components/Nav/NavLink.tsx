@@ -17,6 +17,7 @@ const NavLink: React.FC<NavLinkProps> = ({ children, className, ...rest }) => {
         "py-3 px-5 border border-black rounded-3xl uppercase text-xs font-semibold flex gap-2 hover:bg-gray-100 transition-colors",
         className
       )}
+      tabIndex={0}
     >
       {children}
     </Link>

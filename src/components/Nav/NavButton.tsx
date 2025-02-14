@@ -22,6 +22,7 @@ const NavButton: React.FC<NavBurronProps> = ({
         "py-3 px-5 border border-black rounded-3xl uppercase text-xs font-semibold flex gap-2 hover:bg-gray-50 transition-colors",
         className
       )}
+      tabIndex={0}
     >
       {children}
     </button>
