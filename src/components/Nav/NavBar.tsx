@@ -1,7 +1,9 @@
-import Logo from "@/components/Logo";
 import Link from "next/link";
-import * as ROUTES from "@/constants/routes";
+
 import NavMenu from "./NavMenu";
+import Logo from "@/components/Logo";
+import * as ROUTES from "@/constants/routes";
+
 
 const NavBar: React.FC = () => {
   return (

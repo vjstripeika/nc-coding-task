@@ -1,5 +1,6 @@
-import Typography from "@/components/Typography";
 import Image from "next/image";
+
+import Typography from "@/components/Typography";
 
 type ReviewProps = Record<
   "review" | "image" | "author" | "organization",

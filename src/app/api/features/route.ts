@@ -1,8 +1,9 @@
-import { getFeatures } from "@/server/queries";
-import { getLimit } from "@/utils/urlParam";
 import { NextRequest } from "next/server";
+
+import { getFeatures } from "@/server/queries";
 import { reportError } from "@/utils/reportError";
 import tryCatch from "@/utils/tryCatch";
+import { getLimit } from "@/utils/urlParam";
 
 export async function GET(req: NextRequest) {
   const searchParams = new URL(req.url).searchParams;

@@ -1,7 +1,8 @@
-import { WithClassName } from "@/utils/types";
-import { PropsWithChildren } from "react";
 import cn from "classnames";
 import Link from "next/link";
+import type { PropsWithChildren } from "react";
+
+import { WithClassName } from "@/utils/types";
 
 type NavLinkProps = PropsWithChildren<
   {

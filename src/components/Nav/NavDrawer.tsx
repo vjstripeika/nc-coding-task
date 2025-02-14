@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 import { createPortal } from "react-dom";
-import Typography from "../Typography";
+
 import NavButton from "./NavButton";
+import Typography from "@/components/Typography";
+
 
 type NavDrawerProps = { toggleOpen: () => void };
 

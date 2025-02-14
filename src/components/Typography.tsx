@@ -1,7 +1,8 @@
-import { createElement } from "react";
-import type { WithClassName } from "@/utils/types";
-import type { HTMLAttributes, PropsWithChildren } from "react";
 import cn from "classnames";
+import { createElement } from "react";
+import type { HTMLAttributes, PropsWithChildren } from "react";
+
+import type { WithClassName } from "@/utils/types";
 
 type TyporgaphyVariants = "p" | "small" | "h1" | "h2" | "h3";
 

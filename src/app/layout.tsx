@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import type { PropsWithChildren } from "react";
 
 import Container from "@/components/Container";
 import NavBar from "@/components/Nav/NavBar";
-
-import type { PropsWithChildren } from "react";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],

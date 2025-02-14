@@ -10,7 +10,24 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.config({
+    extends: ["next/core-web-vitals", "next/typescript"],
+    plugins: ["import"],
+    rules: {
+      "import/order": [
+        "error",
+        {
+          groups: [
+            ["builtin", "external"],
+            ["internal", "sibling", "parent"],
+            "index",
+          ],
+          "newlines-between": "always",
+          alphabetize: { order: "asc", caseInsensitive: true },
+        },
+      ],
+    },
+  }),
 ];
 
 export default eslintConfig;

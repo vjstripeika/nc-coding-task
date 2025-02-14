@@ -1,8 +1,9 @@
+import { NextRequest } from "next/server";
+
 import { getReviews } from "@/server/queries";
+import { reportError } from "@/utils/reportError";
 import tryCatch from "@/utils/tryCatch";
 import { getLimit } from "@/utils/urlParam";
-import { NextRequest } from "next/server";
-import { reportError } from "@/utils/reportError";
 
 export async function GET(req: NextRequest) {
   const searchParams = new URL(req.url).searchParams;

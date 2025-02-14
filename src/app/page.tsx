@@ -1,11 +1,12 @@
 "use server";
+import { Fragment } from "react";
+
 import Feature from "@/components/Feature";
+import Review from "@/components/Review";
 import Typography from "@/components/Typography";
 import { getFeatures, getReviews } from "@/server/queries";
-import tryCatch from "@/utils/tryCatch";
-import { Fragment } from "react";
 import { reportError } from "@/utils/reportError";
-import Review from "@/components/Review";
+import tryCatch from "@/utils/tryCatch";
 
 const HomePage: React.FC = async () => {
   const [featuresErr, features] = await tryCatch(getFeatures);
