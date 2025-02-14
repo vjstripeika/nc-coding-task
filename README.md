@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NeckCare technical assignment
 
-## Getting Started
+Greetings,
 
-First, run the development server:
+Thank you taking the time to look through this technical assignment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I was given a static image to create a mock landing page for NeckCare.
+The image included the desired page without any mobile, accessibility or functional requirements.
+From this task I realized that the goal is to see my approach rather than provide me with a technical challenge.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Mini-design
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For this task I've made several decisions:
 
-## Learn More
+- I wanted to use server-side rendering, because it is a better fit for content websites due to SEO indexing and possibility to cache static/rarely changing content.
+- I added a SQLite as embedded database. I think that even mock tasks should simulate real world applications, so I've decided to add a DB layer. I've chosen drizzle as a library to interact with it, because it provides easy to use and easy to understand query builder and migration tool.
+- This naturally created a need for DB seeding function. Since there is not a lot of data, I wrote a custom util to do so.
+- Since the project runs sever-side for most part, data is fetched in nextjs server components directly. However, I've added `/api/features` and `/api/reviews` to showcase how such an api could look like.
 
-To learn more about Next.js, take a look at the following resources:
+## Setting up the project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project requires node `v22.13.1` to run. Use `nvm use` command to use this version.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Copy `.env.example` and rename it to `.env`
+- Run `yarn` to install dependencies
+- Run `yarn migrate` to create `local.db`
+- Run `yarn seed` once to seed the DB.
 
-## Deploy on Vercel
+Congratz! You're good to go!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Running the project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+There are two ways to run the project: dev mode or build.
+
+- `yarn dev` to run it in dev mode.
+- `yarn build` and then `yarn start` to run it as built project.
