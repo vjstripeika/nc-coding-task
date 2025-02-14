@@ -10,6 +10,8 @@ I was given a static image to create a mock landing page for NeckCare.
 The image included the desired page without any mobile, accessibility or functional requirements.
 From this task I realized that the goal is to see my approach rather than provide me with a technical challenge.
 
+[NeckCare - example](example.png)
+
 ## Mini-design
 
 For this task I've made several decisions:
