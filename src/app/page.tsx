@@ -26,7 +26,7 @@ const HomePage: React.FC = async () => {
           <br /> We make <span className="text-muted">necks</span> great
         </Typography>
         {!!features?.length && (
-          <div className="flex flex-col md:flex-row gap-2 md:gap-12">
+          <div className="flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-12">
             {features?.map(({ id, ...feature }) => (
               <Feature {...feature} key={id} />
             ))}

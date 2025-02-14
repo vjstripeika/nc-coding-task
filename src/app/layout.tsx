@@ -26,6 +26,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
           <NavBar />
         </Container>
         <Container>{children}</Container>
+        <Container>
+          <footer className="py-12">{`©NeckCare Holding ehf. ${new Date().getFullYear()}`}</footer>
+        </Container>
       </body>
     </html>
   );
