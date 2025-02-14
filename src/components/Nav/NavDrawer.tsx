@@ -9,15 +9,13 @@ const NavDrawer: React.FC<NavDrawerProps> = ({ toggleOpen }) => {
   return createPortal(
     <Fragment>
       <div
-        className="absolute top-0 bottom-0 right-0 left-0 bg-black opacity-20"
+        className="fixed top-0 bottom-0 right-0 left-0 bg-black opacity-20"
         onClick={toggleOpen}
       />
-      <div className="absolute top-0 bottom-0 right-0 w-96 bg-white shadow-sm">
+      <div className="fixed top-0 bottom-0 right-0 w-96 bg-white shadow-sm">
         <div className="flex justify-between h-36 items-center px-6 border-b border-gray-300">
           <Typography className="font-semibold">Navigation Menu</Typography>
-          <NavButton onClick={toggleOpen} className="">
-            Close
-          </NavButton>
+          <NavButton onClick={toggleOpen}>Close</NavButton>
         </div>
       </div>
     </Fragment>,

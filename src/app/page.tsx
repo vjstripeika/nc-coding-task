@@ -38,7 +38,7 @@ const HomePage: React.FC = async () => {
             variant="h2"
             className="md:text-7xl md:!leading-snug flex-1"
           >
-            Let's see what our clients say
+            {"Let's see what our clients say"}
           </Typography>
           <div className="flex-1 flex-grow flex flex-col gap-8">
             {reviews?.map(({ id, ...review }, idx) => (

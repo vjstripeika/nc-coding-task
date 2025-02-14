@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type TryCatchResult<T> = [null, T] | [unknown, null];
 type AsyncPromiseResolver<T> = (result: TryCatchResult<T>) => void;
 type TryCatchHandler = {

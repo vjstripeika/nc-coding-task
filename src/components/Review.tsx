@@ -14,7 +14,7 @@ const Review: React.FC<ReviewProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-3">
-      <Typography className="font-medium">"{review}"</Typography>
+      <Typography className="font-medium">{`"${review}"`}</Typography>
       <div className="flex gap-3">
         <Image
           src={image}
